@@ -1,0 +1,4220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Klang Mewah Sdn Bhd | Vehicle Air-Conditioning Specialist</title>
+
+<meta name="description"
+content="Klang Mewah Sdn Bhd - Vehicle air-conditioning specialist in Klang, Selangor.">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+    --navy:#020812;
+    --navy2:#041426;
+    --navy3:#071d35;
+    --blue:#0877ff;
+    --blue2:#20bfff;
+    --ice:#8fe8ff;
+    --yellow:#ffd400;
+    --white:#ffffff;
+    --grey:#9cafc4;
+    --glass:rgba(255,255,255,.055);
+    --line:rgba(255,255,255,.09);
+    --shadow:0 25px 80px rgba(0,0,0,.35);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    overflow-x:hidden;
+}
+
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+    background:var(--navy);
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+::selection{
+    background:var(--yellow);
+    color:#06101c;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.site-background{
+    position:fixed;
+    inset:0;
+    z-index:-10;
+
+    background:
+        radial-gradient(circle at 80% 15%,rgba(0,137,255,.14),transparent 27%),
+        radial-gradient(circle at 10% 70%,rgba(0,119,255,.09),transparent 30%),
+        #020812;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:14px 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+
+    z-index:1000;
+
+    transition:.35s;
+
+    background:rgba(2,8,18,.65);
+
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(255,255,255,.04);
+}
+
+nav.scrolled{
+    padding-top:9px;
+    padding-bottom:9px;
+
+    background:rgba(2,8,18,.92);
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    box-shadow:0 12px 50px rgba(0,0,0,.28);
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    min-width:0;
+    flex-shrink:0;
+}
+
+.logo-circle{
+    width:66px;
+    height:66px;
+
+    flex-shrink:0;
+
+    padding:2px;
+    overflow:hidden;
+
+    border-radius:50%;
+
+    background:white;
+
+    border:2px solid var(--yellow);
+
+    box-shadow:
+        0 0 0 4px rgba(8,119,255,.12),
+        0 0 25px rgba(8,119,255,.35);
+}
+
+.logo-circle img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    border-radius:50%;
+}
+
+.logo-name strong{
+    display:block;
+
+    font-size:16px;
+    font-weight:950;
+
+    letter-spacing:1px;
+
+    white-space:nowrap;
+}
+
+.logo-name span{
+    display:block;
+
+    margin-top:3px;
+
+    color:var(--yellow);
+
+    font-size:8px;
+    font-weight:900;
+
+    letter-spacing:2.8px;
+
+    white-space:nowrap;
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:27px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:27px;
+}
+
+.nav-links a{
+    position:relative;
+
+    padding:9px 0;
+
+    color:#c5d4e5;
+
+    font-size:13px;
+    font-weight:700;
+
+    white-space:nowrap;
+}
+
+.nav-links a::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:2px;
+
+    width:0;
+    height:2px;
+
+    background:var(--yellow);
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+.language{
+    display:flex;
+
+    padding:4px;
+
+    flex-shrink:0;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:10px;
+
+    background:rgba(255,255,255,.04);
+}
+
+.language button{
+    padding:8px 11px;
+
+    border:0;
+
+    border-radius:7px;
+
+    background:transparent;
+
+    color:#91a7be;
+
+    cursor:pointer;
+
+    font-size:10px;
+    font-weight:900;
+
+    transition:.25s;
+}
+
+.language button.active{
+    background:var(--yellow);
+    color:#07101c;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+    position:relative;
+
+    width:100%;
+    min-height:100vh;
+
+    padding:150px 5.5% 100px;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,8,18,.98) 0%,
+            rgba(3,18,37,.91) 48%,
+            rgba(3,30,60,.62) 100%
+        );
+}
+
+.hero-grid{
+    position:absolute;
+    inset:0;
+
+    opacity:.13;
+
+    background-image:
+        linear-gradient(rgba(68,177,255,.22) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(68,177,255,.22) 1px,transparent 1px);
+
+    background-size:65px 65px;
+
+    mask-image:linear-gradient(to right,transparent,black);
+}
+
+.hero-light{
+    position:absolute;
+
+    width:750px;
+    height:750px;
+
+    right:-200px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(21,160,255,.28),
+            rgba(0,119,255,.08) 38%,
+            transparent 68%
+        );
+
+    filter:blur(10px);
+
+    animation:heroGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow{
+    from{
+        transform:translateY(-50%) scale(.9);
+    }
+
+    to{
+        transform:translateY(-50%) scale(1.1);
+    }
+}
+
+
+/* =========================================================
+   SNOW
+========================================================= */
+
+.snow{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.snow i{
+    position:absolute;
+    top:-20px;
+
+    width:4px;
+    height:4px;
+
+    border-radius:50%;
+
+    background:#b7eeff;
+
+    box-shadow:0 0 10px #61d7ff;
+
+    opacity:0;
+
+    animation:snowFall linear infinite;
+}
+
+@keyframes snowFall{
+    0%{
+        transform:translateY(-30px) translateX(0);
+        opacity:0;
+    }
+
+    12%{
+        opacity:.65;
+    }
+
+    100%{
+        transform:translateY(105vh) translateX(60px);
+        opacity:0;
+    }
+}
+
+
+/* =========================================================
+   HERO LAYOUT
+========================================================= */
+
+.hero-inner{
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.4fr)
+        minmax(320px,.6fr);
+
+    gap:35px;
+
+    align-items:center;
+}
+
+.hero-copy{
+    width:100%;
+    min-width:0;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:24px;
+
+    color:var(--yellow);
+
+    font-size:11px;
+    font-weight:950;
+
+    letter-spacing:3px;
+
+    line-height:1.5;
+}
+
+.eyebrow::before{
+    content:"";
+
+    width:38px;
+    height:2px;
+
+    flex-shrink:0;
+
+    background:var(--yellow);
+
+    box-shadow:0 0 12px var(--yellow);
+}
+
+.hero h1{
+    width:100%;
+    max-width:1050px;
+
+    margin-bottom:28px;
+
+    font-size:clamp(48px,6vw,92px);
+
+    line-height:.92;
+
+    letter-spacing:-4px;
+
+    font-weight:950;
+
+    overflow-wrap:normal;
+    word-break:normal;
+    hyphens:none;
+}
+
+.hero h1 span{
+    display:block;
+    width:100%;
+
+    overflow-wrap:normal;
+    word-break:normal;
+    hyphens:none;
+}
+
+html[lang="ms"] .hero h1{
+    font-size:clamp(43px,5.1vw,80px);
+    letter-spacing:-3px;
+    line-height:.94;
+}
+
+.hero h1 .ice-text{
+    color:transparent;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #82e6ff,
+            #20bfff
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    filter:drop-shadow(0 0 18px rgba(32,191,255,.2));
+}
+
+.hero-description{
+    max-width:720px;
+
+    margin-bottom:35px;
+
+    color:#b3c3d5;
+
+    font-size:17px;
+
+    line-height:1.85;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:13px;
+}
+
+.btn{
+    position:relative;
+
+    min-height:54px;
+
+    padding:16px 25px;
+
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    border-radius:9px;
+
+    font-size:13px;
+    font-weight:950;
+
+    letter-spacing:.3px;
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+.btn-yellow{
+    background:var(--yellow);
+
+    color:#07101c;
+
+    box-shadow:0 12px 35px rgba(255,212,0,.13);
+}
+
+.btn-yellow:hover{
+    transform:translateY(-4px);
+
+    box-shadow:0 18px 45px rgba(255,212,0,.25);
+}
+
+.btn-glass{
+    border:1px solid rgba(91,199,255,.45);
+
+    background:rgba(8,119,255,.08);
+
+    backdrop-filter:blur(10px);
+}
+
+.btn-glass:hover{
+    transform:translateY(-4px);
+
+    background:rgba(8,119,255,.2);
+
+    border-color:var(--blue2);
+}
+
+
+/* =========================================================
+   A/C HERO VISUAL
+========================================================= */
+
+.ac-visual{
+    position:relative;
+
+    width:min(440px,100%);
+
+    aspect-ratio:1/1;
+
+    margin:auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:transform .2s ease-out;
+}
+
+.ac-ring{
+    position:absolute;
+
+    border-radius:50%;
+
+    border:1px solid rgba(87,207,255,.22);
+}
+
+.ac-ring.one{
+    width:100%;
+    height:100%;
+
+    animation:rotateRing 20s linear infinite;
+}
+
+.ac-ring.two{
+    width:78%;
+    height:78%;
+
+    border-style:dashed;
+
+    animation:rotateRingReverse 14s linear infinite;
+}
+
+.ac-ring.three{
+    width:56%;
+    height:56%;
+
+    box-shadow:
+        inset 0 0 50px rgba(8,119,255,.14),
+        0 0 60px rgba(8,119,255,.12);
+
+    animation:pulseRing 3s ease-in-out infinite;
+}
+
+.ac-ring.one::before,
+.ac-ring.one::after{
+    content:"";
+
+    position:absolute;
+
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:var(--yellow);
+
+    box-shadow:0 0 20px var(--yellow);
+}
+
+.ac-ring.one::before{
+    top:15%;
+    left:13%;
+}
+
+.ac-ring.one::after{
+    right:10%;
+    bottom:20%;
+}
+
+@keyframes rotateRing{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes rotateRingReverse{
+    to{
+        transform:rotate(-360deg);
+    }
+}
+
+@keyframes pulseRing{
+    50%{
+        transform:scale(1.08);
+
+        box-shadow:
+            inset 0 0 80px rgba(8,119,255,.22),
+            0 0 90px rgba(8,119,255,.2);
+    }
+}
+
+.ac-core{
+    position:relative;
+
+    z-index:4;
+
+    width:46%;
+    aspect-ratio:1/1;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle at 35% 30%,rgba(255,255,255,.18),transparent 25%),
+        linear-gradient(145deg,rgba(12,110,220,.42),rgba(1,12,28,.9));
+
+    border:1px solid rgba(122,222,255,.4);
+
+    box-shadow:
+        inset 0 0 45px rgba(0,150,255,.2),
+        0 0 70px rgba(0,145,255,.28);
+
+    backdrop-filter:blur(15px);
+}
+
+.snowflake{
+    color:#b7f1ff;
+
+    font-size:clamp(65px,8vw,100px);
+
+    line-height:1;
+
+    text-shadow:
+        0 0 20px #20bfff,
+        0 0 45px #0877ff;
+
+    animation:snowPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes snowPulse{
+    50%{
+        transform:scale(1.08);
+
+        text-shadow:
+            0 0 35px #20bfff,
+            0 0 70px #0877ff;
+    }
+}
+
+.ac-core strong{
+    margin-top:12px;
+
+    color:white;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    text-align:center;
+}
+
+.float-card{
+    position:absolute;
+
+    z-index:8;
+
+    padding:13px 16px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:10px;
+
+    background:rgba(5,20,39,.68);
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    white-space:nowrap;
+
+    animation:floatCard 4s ease-in-out infinite;
+}
+
+.float-card.a{
+    top:19%;
+    left:-4%;
+}
+
+.float-card.b{
+    right:-5%;
+    bottom:23%;
+
+    animation-delay:1.5s;
+}
+
+@keyframes floatCard{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+
+/* =========================================================
+   QUICK STRIP
+========================================================= */
+
+.quick-strip{
+    position:relative;
+
+    width:88%;
+    max-width:1250px;
+
+    margin:-42px auto 0;
+
+    z-index:20;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,minmax(0,1fr));
+
+    border:1px solid rgba(255,255,255,.09);
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    background:rgba(6,24,45,.86);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:var(--shadow);
+}
+
+.quick-item{
+    min-width:0;
+
+    padding:27px 30px;
+
+    border-right:1px solid rgba(255,255,255,.08);
+}
+
+.quick-item:last-child{
+    border-right:0;
+}
+
+.quick-item small{
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--blue2);
+
+    font-size:9px;
+    font-weight:950;
+
+    letter-spacing:2px;
+}
+
+.quick-item strong{
+    font-size:15px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+section{
+    position:relative;
+
+    width:100%;
+
+    padding:115px 7%;
+}
+
+.section-tag{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    margin-bottom:15px;
+
+    color:var(--yellow);
+
+    font-size:10px;
+    font-weight:950;
+
+    letter-spacing:3px;
+}
+
+.section-tag::before{
+    content:"";
+
+    width:30px;
+    height:2px;
+
+    flex-shrink:0;
+
+    background:var(--yellow);
+}
+
+.section-title{
+    max-width:850px;
+
+    margin-bottom:20px;
+
+    font-size:clamp(38px,5.2vw,67px);
+
+    line-height:1;
+
+    letter-spacing:-2.5px;
+}
+
+.section-description{
+    max-width:720px;
+
+    color:var(--grey);
+
+    font-size:15px;
+
+    line-height:1.85;
+}
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(45px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.visible{
+    opacity:1;
+
+    transform:none;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about{
+    padding-top:150px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #020812,
+            #04101e
+        );
+}
+
+.about-grid{
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,.9fr)
+        minmax(0,1.1fr);
+
+    gap:85px;
+
+    align-items:center;
+}
+
+.about-visual{
+    position:relative;
+
+    min-height:530px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:
+        radial-gradient(circle at center,rgba(8,119,255,.24),transparent 50%),
+        linear-gradient(145deg,#04162b,#020812);
+
+    box-shadow:0 30px 90px rgba(0,0,0,.35);
+}
+
+.about-visual::before{
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+    height:420px;
+
+    border-radius:50%;
+
+    border:1px dashed rgba(53,190,255,.3);
+
+    animation:rotateRing 25s linear infinite;
+}
+
+.about-visual::after{
+    content:"❄";
+
+    position:absolute;
+
+    color:rgba(75,203,255,.08);
+
+    font-size:390px;
+
+    line-height:1;
+}
+
+.about-number{
+    position:relative;
+
+    z-index:4;
+
+    text-align:center;
+}
+
+.about-number strong{
+    display:block;
+
+    color:transparent;
+
+    background:linear-gradient(180deg,white,#43caff);
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    font-size:clamp(80px,11vw,145px);
+
+    line-height:.85;
+
+    letter-spacing:-8px;
+}
+
+.about-number span{
+    display:block;
+
+    margin-top:18px;
+
+    color:var(--yellow);
+
+    font-size:11px;
+    font-weight:950;
+
+    letter-spacing:3px;
+}
+
+.about-content p{
+    margin-top:22px;
+
+    color:#9eb1c6;
+
+    line-height:1.9;
+}
+
+.focus-box{
+    margin-top:35px;
+
+    padding:24px 26px;
+
+    border:1px solid rgba(255,212,0,.17);
+
+    border-left:4px solid var(--yellow);
+
+    border-radius:0 12px 12px 0;
+
+    background:rgba(255,212,0,.035);
+
+    color:#c7d3e1;
+
+    line-height:1.7;
+}
+
+.focus-box strong{
+    color:var(--yellow);
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services{
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            #04101e,
+            #020812
+        );
+}
+
+.services-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+
+    gap:40px;
+
+    margin-bottom:55px;
+}
+
+.services-heading .section-description{
+    max-width:470px;
+}
+
+.service-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,minmax(0,1fr));
+
+    gap:17px;
+}
+
+.service-card{
+    position:relative;
+
+    min-width:0;
+    min-height:250px;
+
+    padding:30px 26px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.075);
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.055),
+            rgba(255,255,255,.018)
+        );
+
+    transition:.35s;
+}
+
+.service-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:130px;
+    height:130px;
+
+    right:-70px;
+    top:-70px;
+
+    border-radius:50%;
+
+    background:rgba(8,119,255,.17);
+
+    filter:blur(25px);
+
+    transition:.4s;
+}
+
+.service-card::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:0;
+    height:3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--blue),
+            var(--blue2),
+            var(--yellow)
+        );
+
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-9px);
+
+    border-color:rgba(40,187,255,.4);
+
+    background:rgba(7,33,62,.8);
+
+    box-shadow:0 25px 60px rgba(0,80,170,.14);
+}
+
+.service-card:hover::after{
+    width:100%;
+}
+
+.service-number{
+    margin-bottom:24px;
+
+    color:rgba(94,203,255,.38);
+
+    font-size:11px;
+    font-weight:950;
+
+    letter-spacing:2px;
+}
+
+.service-icon{
+    margin-bottom:22px;
+
+    font-size:31px;
+}
+
+.service-card h3{
+    position:relative;
+
+    z-index:2;
+
+    margin-bottom:12px;
+
+    font-size:17px;
+
+    line-height:1.35;
+}
+
+.service-card p{
+    position:relative;
+
+    z-index:2;
+
+    color:#879db4;
+
+    font-size:13px;
+
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   VEHICLES
+========================================================= */
+
+.vehicles{
+    overflow:hidden;
+
+    padding-left:0;
+    padding-right:0;
+
+    background:
+        radial-gradient(circle at 50% 40%,rgba(8,119,255,.1),transparent 45%),
+        #04101d;
+}
+
+.vehicle-heading{
+    padding:0 7%;
+
+    text-align:center;
+}
+
+.vehicle-heading .section-tag{
+    justify-content:center;
+}
+
+.vehicle-heading .section-title,
+.vehicle-heading .section-description{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.logo-wall{
+    position:relative;
+
+    width:100%;
+
+    margin-top:60px;
+}
+
+.logo-wall::before,
+.logo-wall::after{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    width:12%;
+    height:100%;
+
+    z-index:5;
+
+    pointer-events:none;
+}
+
+.logo-wall::before{
+    left:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #04101d,
+            transparent
+        );
+}
+
+.logo-wall::after{
+    right:0;
+
+    background:
+        linear-gradient(
+            -90deg,
+            #04101d,
+            transparent
+        );
+}
+
+.logo-row{
+    width:100%;
+
+    overflow:hidden;
+
+    padding:10px 0;
+}
+
+.logo-track{
+    display:flex;
+
+    width:max-content;
+
+    gap:14px;
+
+    animation:logoScroll 42s linear infinite;
+}
+
+.logo-row.reverse .logo-track{
+    animation:logoScrollReverse 46s linear infinite;
+}
+
+.logo-row:hover .logo-track{
+    animation-play-state:paused;
+}
+
+@keyframes logoScroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+@keyframes logoScrollReverse{
+    from{
+        transform:translateX(-50%);
+    }
+
+    to{
+        transform:translateX(0);
+    }
+}
+
+
+/* =========================================================
+   CAR LOGOS
+========================================================= */
+
+.car-logo{
+    width:180px;
+    height:112px;
+
+    flex-shrink:0;
+
+    padding:14px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.075);
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.035);
+
+    backdrop-filter:blur(10px);
+
+    transition:.3s;
+}
+
+.car-logo:hover{
+    transform:scale(1.04);
+
+    border-color:rgba(54,194,255,.45);
+
+    background:rgba(8,119,255,.09);
+
+    box-shadow:0 15px 40px rgba(0,90,200,.13);
+}
+
+.car-logo img{
+    display:block;
+
+    width:auto;
+    height:auto;
+
+    max-width:88px;
+    max-height:46px;
+
+    object-fit:contain;
+
+    filter:
+        brightness(0)
+        invert(1);
+
+    opacity:.88;
+}
+
+.car-logo img.local-car-logo{
+    width:auto;
+    height:auto;
+
+    max-width:105px;
+    max-height:55px;
+
+    object-fit:contain;
+
+    filter:none;
+
+    opacity:1;
+}
+
+.car-logo img.proton-logo{
+    max-width:110px;
+    max-height:58px;
+}
+
+.car-logo img.perodua-logo{
+    max-width:100px;
+    max-height:55px;
+}
+
+.car-logo img.lexus-logo{
+    max-width:105px;
+    max-height:52px;
+}
+
+.car-logo img.mercedes-logo{
+    max-width:95px;
+    max-height:55px;
+}
+
+.car-logo span{
+    color:#b9c8d8;
+
+    font-size:10px;
+    font-weight:900;
+
+    letter-spacing:.7px;
+
+    text-align:center;
+}
+
+.logo-fallback{
+    display:none;
+
+    min-height:45px;
+
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+
+    font-size:14px;
+    font-weight:950;
+
+    text-align:center;
+}
+
+.vehicle-note{
+    width:calc(100% - 40px);
+    max-width:750px;
+
+    margin:45px auto 0;
+
+    padding:19px 25px;
+
+    border:1px solid rgba(255,212,0,.18);
+
+    border-radius:12px;
+
+    background:rgba(255,212,0,.035);
+
+    color:#9eb0c3;
+
+    text-align:center;
+
+    font-size:13px;
+
+    line-height:1.7;
+}
+
+.vehicle-note strong{
+    color:var(--yellow);
+}
+
+
+/* =========================================================
+   DIAGNOSTIC
+========================================================= */
+
+.diagnostic{
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 85% 50%,rgba(32,191,255,.2),transparent 30%),
+        linear-gradient(125deg,#064fa3,#032d62);
+}
+
+.diagnostic-grid{
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,.9fr)
+        minmax(0,1.1fr);
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.diagnostic .section-tag{
+    color:#fff4a0;
+}
+
+.diagnostic-copy p{
+    max-width:600px;
+
+    color:#cde9ff;
+
+    line-height:1.8;
+}
+
+.problem-panel{
+    padding:18px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:12px;
+
+    border:1px solid rgba(255,255,255,.12);
+
+    border-radius:20px;
+
+    background:rgba(2,15,34,.28);
+
+    backdrop-filter:blur(15px);
+}
+
+.problem{
+    min-width:0;
+
+    padding:20px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    border-radius:12px;
+
+    background:rgba(2,10,24,.24);
+
+    transition:.3s;
+}
+
+.problem:hover{
+    transform:translateY(-4px);
+
+    background:rgba(1,11,27,.43);
+}
+
+.problem-icon{
+    display:block;
+
+    margin-bottom:12px;
+
+    font-size:24px;
+}
+
+.problem strong{
+    display:block;
+
+    margin-bottom:5px;
+
+    font-size:13px;
+}
+
+.problem small{
+    color:#a8d5f3;
+
+    font-size:11px;
+
+    line-height:1.5;
+}
+
+
+/* =========================================================
+   WHY
+========================================================= */
+
+.why{
+    background:#020812;
+}
+
+.why-header{
+    margin-bottom:55px;
+}
+
+.why-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,minmax(0,1fr));
+
+    gap:18px;
+}
+
+.why-card{
+    min-width:0;
+
+    padding:32px 27px;
+
+    border:1px solid rgba(255,255,255,.07);
+
+    border-radius:15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #071a30,
+            #04101e
+        );
+
+    transition:.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-6px);
+
+    border-color:rgba(255,212,0,.32);
+}
+
+.why-number{
+    margin-bottom:35px;
+
+    color:var(--yellow);
+
+    font-size:11px;
+    font-weight:950;
+
+    letter-spacing:2px;
+}
+
+.why-card h3{
+    margin-bottom:12px;
+
+    font-size:17px;
+}
+
+.why-card p{
+    color:#8fa4ba;
+
+    font-size:13px;
+
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact{
+    overflow:hidden;
+
+    background:
+        radial-gradient(circle at 10% 50%,rgba(8,119,255,.12),transparent 30%),
+        #04101d;
+}
+
+.contact-grid{
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,.9fr)
+        minmax(0,1.1fr);
+
+    gap:70px;
+
+    align-items:start;
+}
+
+.contact-left p{
+    max-width:580px;
+
+    margin-bottom:35px;
+
+    color:#98abc0;
+
+    line-height:1.8;
+}
+
+.big-phone{
+    display:inline-block;
+
+    margin-bottom:25px;
+
+    color:var(--blue2);
+
+    font-size:clamp(29px,4vw,47px);
+
+    font-weight:950;
+
+    letter-spacing:-2px;
+
+    transition:.3s;
+}
+
+.big-phone:hover{
+    color:var(--yellow);
+}
+
+.contact-buttons{
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+.visit-panel{
+    position:relative;
+
+    padding:35px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(67,193,255,.2);
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8,119,255,.11),
+            rgba(255,255,255,.025)
+        );
+
+    box-shadow:0 30px 80px rgba(0,0,0,.25);
+}
+
+.visit-panel::before{
+    content:"";
+
+    position:absolute;
+
+    width:230px;
+    height:230px;
+
+    right:-100px;
+    top:-100px;
+
+    border-radius:50%;
+
+    background:rgba(8,119,255,.17);
+
+    filter:blur(35px);
+}
+
+.visit-section{
+    position:relative;
+
+    z-index:2;
+
+    padding:0 0 27px;
+
+    margin-bottom:27px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.visit-section:last-child{
+    padding-bottom:0;
+    margin-bottom:0;
+
+    border:0;
+}
+
+.visit-label{
+    display:block;
+
+    margin-bottom:12px;
+
+    color:var(--yellow);
+
+    font-size:9px;
+    font-weight:950;
+
+    letter-spacing:2px;
+}
+
+.visit-section p{
+    color:#d2dce7;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+.hours{
+    display:grid;
+    gap:10px;
+}
+
+.hour{
+    display:flex;
+    justify-content:space-between;
+
+    gap:15px;
+
+    color:#bdcbd9;
+
+    font-size:13px;
+}
+
+.hour span:last-child{
+    text-align:right;
+}
+
+.hour.closed{
+    color:var(--yellow);
+
+    font-weight:900;
+}
+
+
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta{
+    padding-top:85px;
+    padding-bottom:85px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    background:
+        radial-gradient(circle at center,rgba(62,194,255,.18),transparent 45%),
+        linear-gradient(135deg,#064ca1,#032650);
+}
+
+.final-cta h2{
+    position:relative;
+
+    z-index:2;
+
+    max-width:800px;
+
+    margin:0 auto 18px;
+
+    font-size:clamp(38px,6vw,72px);
+
+    line-height:.98;
+
+    letter-spacing:-3px;
+}
+
+.final-cta p{
+    position:relative;
+
+    z-index:2;
+
+    max-width:620px;
+
+    margin:0 auto 30px;
+
+    color:#c8e8ff;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+    padding:45px 7%;
+
+    background:#01050b;
+
+    color:#64778c;
+
+    text-align:center;
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+footer strong{
+    color:white;
+}
+
+
+/* =========================================================
+   MOBILE BAR
+========================================================= */
+
+.mobile-bar{
+    display:none;
+}
+
+
+/* =========================================================
+   RESPONSIVE TABLET
+========================================================= */
+
+@media(max-width:1200px){
+
+    .hero-inner{
+        grid-template-columns:
+            minmax(0,1.25fr)
+            minmax(310px,.75fr);
+    }
+
+    .hero h1{
+        font-size:clamp(47px,5.6vw,78px);
+    }
+
+    html[lang="ms"] .hero h1{
+        font-size:clamp(42px,4.8vw,68px);
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(3,minmax(0,1fr));
+    }
+
+    .why-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+}
+
+
+@media(max-width:950px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:auto;
+
+        padding:135px 6% 130px;
+    }
+
+    .hero-inner{
+        grid-template-columns:1fr;
+
+        gap:65px;
+    }
+
+    .hero h1{
+        max-width:850px;
+
+        font-size:clamp(48px,9vw,82px);
+    }
+
+    html[lang="ms"] .hero h1{
+        font-size:clamp(43px,7.5vw,70px);
+    }
+
+    .ac-visual{
+        width:min(420px,80vw);
+    }
+
+    .quick-strip{
+        grid-template-columns:1fr;
+
+        margin-top:-65px;
+    }
+
+    .quick-item{
+        border-right:0;
+
+        border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .quick-item:last-child{
+        border-bottom:0;
+    }
+
+    .about-grid,
+    .diagnostic-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-heading{
+        display:block;
+    }
+
+    .services-heading .section-description{
+        margin-top:20px;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    body{
+        padding-bottom:65px;
+    }
+
+    nav{
+        padding:10px 14px;
+    }
+
+    .logo{
+        gap:8px;
+
+        flex:1;
+    }
+
+    .logo-circle{
+        width:49px;
+        height:49px;
+    }
+
+    .logo-name strong{
+        font-size:11px;
+    }
+
+    .logo-name span{
+        font-size:6px;
+
+        letter-spacing:1.6px;
+    }
+
+    .nav-right{
+        gap:8px;
+    }
+
+    .language button{
+        padding:7px;
+
+        font-size:8px;
+    }
+
+    .hero{
+        padding:115px 18px 110px;
+    }
+
+    .hero-inner{
+        display:block;
+    }
+
+    .eyebrow{
+        margin-bottom:18px;
+
+        font-size:8.5px;
+
+        letter-spacing:1.7px;
+    }
+
+    .hero h1{
+        font-size:clamp(42px,13vw,59px);
+
+        line-height:.94;
+
+        letter-spacing:-2.8px;
+    }
+
+    html[lang="ms"] .hero h1{
+        font-size:clamp(37px,10.7vw,49px);
+
+        line-height:.97;
+
+        letter-spacing:-2px;
+    }
+
+    .hero-description{
+        margin-bottom:28px;
+
+        font-size:14px;
+
+        line-height:1.75;
+    }
+
+    .buttons{
+        display:grid;
+
+        grid-template-columns:1fr;
+
+        width:100%;
+    }
+
+    .buttons .btn{
+        width:100%;
+    }
+
+    .ac-visual{
+        width:min(310px,80vw);
+
+        margin-top:65px;
+    }
+
+    .float-card{
+        padding:9px 10px;
+
+        font-size:7.5px;
+    }
+
+    .quick-strip{
+        width:calc(100% - 32px);
+
+        border-radius:13px;
+    }
+
+    .quick-item{
+        padding:21px 20px;
+    }
+
+    section{
+        padding:80px 18px;
+    }
+
+    .section-tag{
+        font-size:8.5px;
+
+        letter-spacing:2px;
+    }
+
+    .section-title{
+        font-size:clamp(34px,10vw,47px);
+
+        letter-spacing:-1.8px;
+
+        line-height:1.03;
+    }
+
+    .section-description{
+        font-size:14px;
+    }
+
+    .about{
+        padding-top:105px;
+    }
+
+    .about-grid{
+        gap:45px;
+    }
+
+
+    /* =====================================================
+       FIXED MOBILE A/C CARD
+       The circle now stays INSIDE the card.
+    ===================================================== */
+
+    .about-visual{
+        width:100%;
+
+        min-height:340px;
+
+        overflow:hidden;
+    }
+
+    .about-visual::before{
+        width:min(270px,72vw);
+        height:min(270px,72vw);
+    }
+
+    .about-visual::after{
+        font-size:min(235px,61vw);
+    }
+
+    .about-number strong{
+        font-size:76px;
+
+        letter-spacing:-5px;
+    }
+
+    .about-number span{
+        margin-top:15px;
+
+        font-size:9px;
+
+        letter-spacing:2.4px;
+    }
+
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .vehicles{
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .vehicle-heading{
+        padding:0 18px;
+    }
+
+    .logo-wall{
+        margin-top:40px;
+    }
+
+    .car-logo{
+        width:135px;
+        height:95px;
+
+        padding:10px;
+    }
+
+    .car-logo img{
+        max-width:70px;
+        max-height:36px;
+    }
+
+    .car-logo img.local-car-logo{
+        max-width:82px;
+        max-height:42px;
+    }
+
+    .car-logo span{
+        font-size:8px;
+    }
+
+    .problem-panel{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-buttons{
+        display:grid;
+
+        grid-template-columns:1fr;
+    }
+
+    .contact-buttons .btn{
+        width:100%;
+    }
+
+    .visit-panel{
+        padding:27px 21px;
+    }
+
+    .final-cta{
+        padding:70px 18px;
+    }
+
+    .final-cta .btn{
+        width:100%;
+    }
+
+    .mobile-bar{
+        position:fixed;
+
+        left:0;
+        bottom:0;
+
+        width:100%;
+        height:65px;
+
+        display:grid;
+
+        grid-template-columns:1fr 1fr;
+
+        z-index:9999;
+
+        box-shadow:0 -10px 35px rgba(0,0,0,.45);
+    }
+
+    .mobile-bar a{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        font-size:12px;
+        font-weight:950;
+    }
+
+    .mobile-call{
+        background:var(--yellow);
+
+        color:#07101c;
+    }
+
+    .mobile-map{
+        background:var(--blue);
+
+        color:white;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    nav{
+        padding-left:9px;
+        padding-right:9px;
+    }
+
+    .logo-circle{
+        width:43px;
+        height:43px;
+    }
+
+    .logo-name strong{
+        font-size:9px;
+    }
+
+    .logo-name span{
+        font-size:5.5px;
+    }
+
+    .hero{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    html[lang="ms"] .hero h1{
+        font-size:clamp(32px,9.7vw,39px);
+    }
+
+    section{
+        padding-left:15px;
+        padding-right:15px;
+    }
+
+    .about-visual{
+        min-height:315px;
+    }
+
+    .about-visual::before{
+        width:235px;
+        height:235px;
+    }
+
+    .about-visual::after{
+        font-size:205px;
+    }
+
+    .about-number strong{
+        font-size:67px;
+    }
+
+    .about-number span{
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+    .logo-track,
+    .snow i,
+    .ac-ring,
+    .snowflake,
+    .float-card,
+    .hero-light{
+        animation:none !important;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="site-background"></div>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav id="navbar">
+
+<a href="#home" class="logo">
+
+    <div class="logo-circle">
+        <img src="klang-mewah-logo.png" alt="Klang Mewah Logo">
+    </div>
+
+    <div class="logo-name">
+        <strong>KLANG MEWAH</strong>
+        <span>SDN BHD</span>
+    </div>
+
+</a>
+
+
+<div class="nav-right">
+
+    <div class="nav-links">
+
+        <a href="#home"
+        data-en="Home"
+        data-ms="Utama">Home</a>
+
+        <a href="#about"
+        data-en="About"
+        data-ms="Tentang Kami">About</a>
+
+        <a href="#services"
+        data-en="Services"
+        data-ms="Perkhidmatan">Services</a>
+
+        <a href="#vehicles"
+        data-en="Vehicles"
+        data-ms="Kenderaan">Vehicles</a>
+
+        <a href="#contact"
+        data-en="Contact"
+        data-ms="Hubungi Kami">Contact</a>
+
+    </div>
+
+
+    <div class="language">
+
+        <button
+        id="bmButton"
+        onclick="changeLanguage('ms')">
+        BM
+        </button>
+
+        <button
+        id="enButton"
+        class="active"
+        onclick="changeLanguage('en')">
+        EN
+        </button>
+
+    </div>
+
+</div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="hero" id="home">
+
+<div class="hero-grid"></div>
+<div class="hero-light"></div>
+
+<div class="snow">
+    <i style="left:4%;animation-duration:9s;"></i>
+    <i style="left:11%;animation-duration:12s;animation-delay:2s;"></i>
+    <i style="left:19%;animation-duration:8s;animation-delay:4s;"></i>
+    <i style="left:27%;animation-duration:13s;animation-delay:1s;"></i>
+    <i style="left:34%;animation-duration:10s;animation-delay:5s;"></i>
+    <i style="left:42%;animation-duration:14s;"></i>
+    <i style="left:51%;animation-duration:9s;animation-delay:3s;"></i>
+    <i style="left:59%;animation-duration:11s;animation-delay:6s;"></i>
+    <i style="left:67%;animation-duration:13s;animation-delay:2s;"></i>
+    <i style="left:74%;animation-duration:8s;animation-delay:5s;"></i>
+    <i style="left:82%;animation-duration:12s;"></i>
+    <i style="left:89%;animation-duration:10s;animation-delay:4s;"></i>
+</div>
+
+
+<div class="hero-inner">
+
+<div class="hero-copy">
+
+    <div
+    class="eyebrow"
+    data-en="VEHICLE AIR-CONDITIONING SPECIALIST"
+    data-ms="PAKAR PENGHAWA DINGIN KENDERAAN">
+    VEHICLE AIR-CONDITIONING SPECIALIST
+    </div>
+
+
+    <h1>
+
+        <span
+        data-en="STAY COOL."
+        data-ms="KEKAL SEJUK.">
+        STAY COOL.
+        </span>
+
+        <span
+        class="ice-text"
+        data-en="DRIVE COMFORTABLE."
+        data-ms="PEMANDUAN LEBIH SELESA.">
+        DRIVE COMFORTABLE.
+        </span>
+
+    </h1>
+
+
+    <p
+    class="hero-description"
+    data-en="Complete vehicle air-conditioning diagnosis, servicing and repair. Klang Mewah focuses specifically on keeping your vehicle's A/C system performing at its best."
+    data-ms="Pemeriksaan, servis dan pembaikan lengkap penghawa dingin kenderaan. Klang Mewah memberi tumpuan khusus untuk memastikan sistem A/C kenderaan anda berfungsi dengan baik.">
+
+    Complete vehicle air-conditioning diagnosis,
+    servicing and repair. Klang Mewah focuses specifically
+    on keeping your vehicle's A/C system performing at its best.
+
+    </p>
+
+
+    <div class="buttons">
+
+        <a
+        href="tel:0332915643"
+        class="btn btn-yellow"
+        data-en="☎ CALL 03-3291 5643"
+        data-ms="☎ HUBUNGI 03-3291 5643">
+        ☎ CALL 03-3291 5643
+        </a>
+
+
+        <a
+        href="#contact"
+        class="btn btn-glass"
+        data-en="📍 VISIT WORKSHOP"
+        data-ms="📍 KUNJUNGI BENGKEL">
+        📍 VISIT WORKSHOP
+        </a>
+
+    </div>
+
+</div>
+
+
+<div class="ac-visual">
+
+    <div class="ac-ring one"></div>
+    <div class="ac-ring two"></div>
+    <div class="ac-ring three"></div>
+
+
+    <div class="ac-core">
+
+        <div class="snowflake">
+        ❄
+        </div>
+
+        <strong>
+        KLANG MEWAH
+        </strong>
+
+    </div>
+
+
+    <div
+    class="float-card a"
+    data-en="❄ A/C SPECIALIST"
+    data-ms="❄ PAKAR A/C">
+    ❄ A/C SPECIALIST
+    </div>
+
+
+    <div
+    class="float-card b"
+    data-en="MANY VEHICLES • A/C"
+    data-ms="PELBAGAI KENDERAAN • A/C">
+    MANY VEHICLES • A/C
+    </div>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================================================
+     QUICK INFO
+========================================================= -->
+
+<div class="quick-strip reveal">
+
+<div class="quick-item">
+
+    <small
+    data-en="SPECIALTY"
+    data-ms="KEPAKARAN">
+    SPECIALTY
+    </small>
+
+    <strong
+    data-en="Vehicle Air-Conditioning"
+    data-ms="Penghawa Dingin Kenderaan">
+    Vehicle Air-Conditioning
+    </strong>
+
+</div>
+
+
+<div class="quick-item">
+
+    <small
+    data-en="OPEN"
+    data-ms="DIBUKA">
+    OPEN
+    </small>
+
+    <strong
+    data-en="Mon – Sat · 8:30 AM – 7:00 PM"
+    data-ms="Isnin – Sabtu · 8:30 PG – 7:00 PTG">
+    Mon – Sat · 8:30 AM – 7:00 PM
+    </strong>
+
+</div>
+
+
+<div class="quick-item">
+
+    <small
+    data-en="WORKSHOP"
+    data-ms="BENGKEL">
+    WORKSHOP
+    </small>
+
+    <strong>
+    Taman Sri Rantau · Klang
+    </strong>
+
+</div>
+
+</div>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about" id="about">
+
+<div class="about-grid">
+
+
+<div class="about-visual reveal">
+
+    <div class="about-number">
+
+        <strong>A/C</strong>
+
+        <span
+        data-en="OUR SPECIALTY"
+        data-ms="KEPAKARAN KAMI">
+        OUR SPECIALTY
+        </span>
+
+    </div>
+
+</div>
+
+
+<div class="about-content reveal">
+
+    <div
+    class="section-tag"
+    data-en="ABOUT KLANG MEWAH"
+    data-ms="TENTANG KLANG MEWAH">
+    ABOUT KLANG MEWAH
+    </div>
+
+
+    <h2
+    class="section-title"
+    data-en="One Specialty. Complete A/C Care."
+    data-ms="Satu Kepakaran. Penjagaan A/C Lengkap.">
+    One Specialty. Complete A/C Care.
+    </h2>
+
+
+    <p
+    data-en="Klang Mewah Sdn Bhd provides vehicle air-conditioning inspection, servicing, diagnosis and repair for many types of vehicles."
+    data-ms="Klang Mewah Sdn Bhd menyediakan pemeriksaan, servis, diagnosis dan pembaikan penghawa dingin untuk pelbagai jenis kenderaan.">
+
+    Klang Mewah Sdn Bhd provides vehicle air-conditioning
+    inspection, servicing, diagnosis and repair for many types
+    of vehicles.
+
+    </p>
+
+
+    <p
+    data-en="From weak cooling and refrigerant leaks to compressors, cooling coils, blowers and A/C electrical components, our work is focused specifically on the vehicle air-conditioning system."
+    data-ms="Daripada masalah A/C kurang sejuk dan kebocoran refrigerant sehingga kompresor, cooling coil, blower dan komponen elektrik A/C, kerja kami memberi tumpuan khusus kepada sistem penghawa dingin kenderaan.">
+
+    From weak cooling and refrigerant leaks to compressors,
+    cooling coils, blowers and A/C electrical components,
+    our work is focused specifically on the vehicle
+    air-conditioning system.
+
+    </p>
+
+
+    <div class="focus-box">
+
+        <strong
+        data-en="OUR FOCUS:"
+        data-ms="FOKUS KAMI:">
+        OUR FOCUS:
+        </strong>
+
+        <span
+        data-en=" Vehicle air-conditioning systems — diagnosis, servicing, repair and A/C component replacement."
+        data-ms=" Sistem penghawa dingin kenderaan — diagnosis, servis, pembaikan dan penggantian komponen A/C.">
+
+        Vehicle air-conditioning systems — diagnosis,
+        servicing, repair and A/C component replacement.
+
+        </span>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section class="services" id="services">
+
+<div class="services-heading reveal">
+
+<div>
+
+    <div
+    class="section-tag"
+    data-en="A/C SERVICES"
+    data-ms="PERKHIDMATAN A/C">
+    A/C SERVICES
+    </div>
+
+    <h2
+    class="section-title"
+    data-en="Everything Your Vehicle A/C Needs."
+    data-ms="Keperluan Lengkap A/C Kenderaan Anda.">
+    Everything Your Vehicle A/C Needs.
+    </h2>
+
+</div>
+
+
+<p
+class="section-description"
+data-en="From inspection to complete A/C repair, our services cover the important components of your vehicle's air-conditioning system."
+data-ms="Daripada pemeriksaan sehingga pembaikan A/C lengkap, perkhidmatan kami merangkumi komponen penting sistem penghawa dingin kenderaan anda.">
+
+From inspection to complete A/C repair,
+our services cover the important components
+of your vehicle's air-conditioning system.
+
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+<div class="service-card reveal">
+    <div class="service-number">01</div>
+    <div class="service-icon">❄️</div>
+
+    <h3 data-en="A/C Diagnosis" data-ms="Diagnosis A/C">
+    A/C Diagnosis
+    </h3>
+
+    <p
+    data-en="Inspection and troubleshooting to identify vehicle A/C cooling problems."
+    data-ms="Pemeriksaan dan diagnosis untuk mengenal pasti masalah penyejukan A/C kenderaan.">
+    Inspection and troubleshooting to identify vehicle A/C cooling problems.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">02</div>
+    <div class="service-icon">🔧</div>
+
+    <h3 data-en="Air-Cond Servicing" data-ms="Servis Air-Cond">
+    Air-Cond Servicing
+    </h3>
+
+    <p
+    data-en="Vehicle air-conditioning servicing and maintenance."
+    data-ms="Servis dan penyelenggaraan penghawa dingin kenderaan.">
+    Vehicle air-conditioning servicing and maintenance.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">03</div>
+    <div class="service-icon">💨</div>
+
+    <h3 data-en="Refrigerant Service" data-ms="Servis Refrigerant">
+    Refrigerant Service
+    </h3>
+
+    <p
+    data-en="Inspection and servicing of the vehicle A/C refrigerant system."
+    data-ms="Pemeriksaan dan servis sistem refrigerant A/C kenderaan.">
+    Inspection and servicing of the vehicle A/C refrigerant system.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">04</div>
+    <div class="service-icon">⚙️</div>
+
+    <h3>Compressor</h3>
+
+    <p
+    data-en="Compressor inspection, diagnosis, repair and replacement."
+    data-ms="Pemeriksaan, diagnosis, pembaikan dan penggantian kompresor.">
+    Compressor inspection, diagnosis, repair and replacement.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">05</div>
+    <div class="service-icon">🧊</div>
+
+    <h3>Cooling Coil / Evaporator</h3>
+
+    <p
+    data-en="Cooling coil and evaporator inspection, servicing and replacement."
+    data-ms="Pemeriksaan, servis dan penggantian cooling coil dan evaporator.">
+    Cooling coil and evaporator inspection, servicing and replacement.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">06</div>
+    <div class="service-icon">🌬️</div>
+
+    <h3 data-en="Blower & Fan" data-ms="Blower & Kipas A/C">
+    Blower & Fan
+    </h3>
+
+    <p
+    data-en="Diagnosis and repair for weak airflow, blower and A/C fan problems."
+    data-ms="Diagnosis dan pembaikan masalah aliran udara lemah, blower dan kipas A/C.">
+    Diagnosis and repair for weak airflow, blower and A/C fan problems.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">07</div>
+    <div class="service-icon">🔍</div>
+
+    <h3 data-en="Leak Detection" data-ms="Pengesanan Kebocoran">
+    Leak Detection
+    </h3>
+
+    <p
+    data-en="Inspection to identify refrigerant leaks in the vehicle A/C system."
+    data-ms="Pemeriksaan untuk mengesan kebocoran refrigerant dalam sistem A/C kenderaan.">
+    Inspection to identify refrigerant leaks in the vehicle A/C system.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">08</div>
+    <div class="service-icon">⚡</div>
+
+    <h3 data-en="A/C Electrical" data-ms="Elektrik A/C">
+    A/C Electrical
+    </h3>
+
+    <p
+    data-en="Troubleshooting electrical components specifically related to the vehicle A/C system."
+    data-ms="Diagnosis komponen elektrik yang berkaitan khusus dengan sistem A/C kenderaan.">
+    Troubleshooting electrical components specifically related to the vehicle A/C system.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">09</div>
+    <div class="service-icon">🔩</div>
+
+    <h3>Condenser</h3>
+
+    <p
+    data-en="Condenser inspection, servicing, repair and replacement."
+    data-ms="Pemeriksaan, servis, pembaikan dan penggantian condenser.">
+    Condenser inspection, servicing, repair and replacement.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">10</div>
+    <div class="service-icon">💧</div>
+
+    <h3 data-en="Cleaning & Flushing" data-ms="Pembersihan & Flushing">
+    Cleaning & Flushing
+    </h3>
+
+    <p
+    data-en="A/C system cleaning and flushing when required during servicing or repair."
+    data-ms="Pembersihan dan flushing sistem A/C apabila diperlukan semasa servis atau pembaikan.">
+    A/C system cleaning and flushing when required during servicing or repair.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">11</div>
+    <div class="service-icon">🛠️</div>
+
+    <h3
+    data-en="A/C Parts Replacement"
+    data-ms="Penggantian Komponen A/C">
+    A/C Parts Replacement
+    </h3>
+
+    <p
+    data-en="Replacement of components specifically related to the vehicle air-conditioning system."
+    data-ms="Penggantian komponen yang berkaitan khusus dengan sistem penghawa dingin kenderaan.">
+    Replacement of components specifically related to the vehicle air-conditioning system.
+    </p>
+</div>
+
+
+<div class="service-card reveal">
+    <div class="service-number">12</div>
+    <div class="service-icon">🚗</div>
+
+    <h3
+    data-en="Complete A/C Repair"
+    data-ms="Pembaikan A/C Lengkap">
+    Complete A/C Repair
+    </h3>
+
+    <p
+    data-en="Complete diagnosis and repair of vehicle air-conditioning systems."
+    data-ms="Diagnosis dan pembaikan lengkap sistem penghawa dingin kenderaan.">
+    Complete diagnosis and repair of vehicle air-conditioning systems.
+    </p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     VEHICLES
+========================================================= -->
+
+<section class="vehicles" id="vehicles">
+
+<div class="vehicle-heading reveal">
+
+    <div
+    class="section-tag"
+    data-en="VEHICLES WE SERVICE"
+    data-ms="KENDERAAN YANG KAMI SERVIS">
+    VEHICLES WE SERVICE
+    </div>
+
+
+    <h2
+    class="section-title"
+    data-en="All Makes. One A/C Specialist."
+    data-ms="Pelbagai Jenama. Satu Pakar A/C.">
+    All Makes. One A/C Specialist.
+    </h2>
+
+
+    <p
+    class="section-description"
+    data-en="Vehicle air-conditioning service for many popular local, Japanese, Korean and continental vehicle brands."
+    data-ms="Perkhidmatan penghawa dingin untuk pelbagai jenama kenderaan tempatan, Jepun, Korea dan kontinental.">
+
+    Vehicle air-conditioning service for many popular local,
+    Japanese, Korean and continental vehicle brands.
+
+    </p>
+
+</div>
+
+
+<div class="logo-wall reveal">
+
+
+<!-- ROW 1 -->
+
+<div class="logo-row">
+
+<div class="logo-track">
+
+
+<div class="car-logo">
+    <img
+    class="local-car-logo proton-logo"
+    src="proton.png"
+    alt="Proton"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">PROTON</div>
+    <span>PROTON</span>
+</div>
+
+
+<div class="car-logo">
+    <img
+    class="local-car-logo perodua-logo"
+    src="perodua.png"
+    alt="Perodua"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">PERODUA</div>
+    <span>PERODUA</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/toyota"
+    alt="Toyota"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">TOYOTA</div>
+    <span>TOYOTA</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/honda"
+    alt="Honda"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">HONDA</div>
+    <span>HONDA</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/nissan"
+    alt="Nissan"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">NISSAN</div>
+    <span>NISSAN</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/mazda"
+    alt="Mazda"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">MAZDA</div>
+    <span>MAZDA</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/mitsubishi"
+    alt="Mitsubishi"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">MITSUBISHI</div>
+    <span>MITSUBISHI</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/isuzu"
+    alt="Isuzu"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">ISUZU</div>
+    <span>ISUZU</span>
+</div>
+
+
+<!-- DUPLICATE -->
+
+
+<div class="car-logo">
+    <img
+    class="local-car-logo proton-logo"
+    src="proton.png"
+    alt="Proton"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">PROTON</div>
+    <span>PROTON</span>
+</div>
+
+
+<div class="car-logo">
+    <img
+    class="local-car-logo perodua-logo"
+    src="perodua.png"
+    alt="Perodua"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">PERODUA</div>
+    <span>PERODUA</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/toyota"
+    alt="Toyota"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">TOYOTA</div>
+    <span>TOYOTA</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/honda"
+    alt="Honda"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">HONDA</div>
+    <span>HONDA</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/nissan"
+    alt="Nissan"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">NISSAN</div>
+    <span>NISSAN</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/mazda"
+    alt="Mazda"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">MAZDA</div>
+    <span>MAZDA</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/mitsubishi"
+    alt="Mitsubishi"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">MITSUBISHI</div>
+    <span>MITSUBISHI</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/isuzu"
+    alt="Isuzu"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">ISUZU</div>
+    <span>ISUZU</span>
+</div>
+
+
+</div>
+</div>
+
+
+
+<!-- ROW 2 -->
+
+<div class="logo-row reverse">
+
+<div class="logo-track">
+
+
+<div class="car-logo">
+    <img
+    class="local-car-logo mercedes-logo"
+    src="mercedes.png"
+    alt="Mercedes-Benz"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">MERCEDES</div>
+    <span>MERCEDES-BENZ</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/bmw"
+    alt="BMW"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">BMW</div>
+    <span>BMW</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/audi"
+    alt="Audi"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">AUDI</div>
+    <span>AUDI</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/volkswagen"
+    alt="Volkswagen"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">VOLKSWAGEN</div>
+    <span>VOLKSWAGEN</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/volvo"
+    alt="Volvo"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">VOLVO</div>
+    <span>VOLVO</span>
+</div>
+
+
+<div class="car-logo">
+    <img
+    class="local-car-logo lexus-logo"
+    src="lexus.png"
+    alt="Lexus"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">LEXUS</div>
+    <span>LEXUS</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/hyundai"
+    alt="Hyundai"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">HYUNDAI</div>
+    <span>HYUNDAI</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/kia"
+    alt="Kia"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">KIA</div>
+    <span>KIA</span>
+</div>
+
+
+<!-- DUPLICATE -->
+
+
+<div class="car-logo">
+    <img
+    class="local-car-logo mercedes-logo"
+    src="mercedes.png"
+    alt="Mercedes-Benz"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">MERCEDES</div>
+    <span>MERCEDES-BENZ</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/bmw"
+    alt="BMW"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">BMW</div>
+    <span>BMW</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/audi"
+    alt="Audi"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">AUDI</div>
+    <span>AUDI</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/volkswagen"
+    alt="Volkswagen"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">VOLKSWAGEN</div>
+    <span>VOLKSWAGEN</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/volvo"
+    alt="Volvo"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">VOLVO</div>
+    <span>VOLVO</span>
+</div>
+
+
+<div class="car-logo">
+    <img
+    class="local-car-logo lexus-logo"
+    src="lexus.png"
+    alt="Lexus"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">LEXUS</div>
+    <span>LEXUS</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/hyundai"
+    alt="Hyundai"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">HYUNDAI</div>
+    <span>HYUNDAI</span>
+</div>
+
+
+<div class="car-logo">
+    <img src="https://cdn.simpleicons.org/kia"
+    alt="Kia"
+    onerror="logoError(this)">
+
+    <div class="logo-fallback">KIA</div>
+    <span>KIA</span>
+</div>
+
+
+</div>
+</div>
+
+</div>
+
+
+
+<div class="vehicle-note reveal">
+
+    <strong
+    data-en="Don't see your vehicle brand?"
+    data-ms="Tak nampak jenama kenderaan anda?">
+    Don't see your vehicle brand?
+    </strong>
+
+    <br>
+
+    <span
+    data-en="Contact us — we service many other vehicle makes too."
+    data-ms="Hubungi kami — kami juga menyediakan servis untuk pelbagai jenama kenderaan lain.">
+    Contact us — we service many other vehicle makes too.
+    </span>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DIAGNOSTIC
+========================================================= -->
+
+<section class="diagnostic">
+
+<div class="diagnostic-grid">
+
+<div class="diagnostic-copy reveal">
+
+    <div
+    class="section-tag"
+    data-en="A/C PROBLEM?"
+    data-ms="A/C BERMASALAH?">
+    A/C PROBLEM?
+    </div>
+
+    <h2
+    class="section-title"
+    data-en="Air-Cond Not Cold?"
+    data-ms="Air-Cond Tak Sejuk?">
+    Air-Cond Not Cold?
+    </h2>
+
+    <p
+    data-en="If your vehicle's A/C is no longer cooling properly, bring it to Klang Mewah for inspection and diagnosis."
+    data-ms="Jika A/C kenderaan anda tidak lagi sejuk seperti biasa, bawa ke Klang Mewah untuk pemeriksaan dan diagnosis.">
+    If your vehicle's A/C is no longer cooling properly,
+    bring it to Klang Mewah for inspection and diagnosis.
+    </p>
+
+</div>
+
+
+<div class="problem-panel reveal">
+
+
+<div class="problem">
+    <span class="problem-icon">❄️</span>
+
+    <strong data-en="Not Cold" data-ms="Tak Sejuk">
+    Not Cold
+    </strong>
+
+    <small
+    data-en="A/C blowing but not cooling."
+    data-ms="A/C keluar angin tetapi tidak sejuk.">
+    A/C blowing but not cooling.
+    </small>
+</div>
+
+
+<div class="problem">
+    <span class="problem-icon">🌬️</span>
+
+    <strong data-en="Weak Airflow" data-ms="Angin Lemah">
+    Weak Airflow
+    </strong>
+
+    <small
+    data-en="Airflow feels weaker than usual."
+    data-ms="Aliran udara lebih lemah daripada biasa.">
+    Airflow feels weaker than usual.
+    </small>
+</div>
+
+
+<div class="problem">
+    <span class="problem-icon">💨</span>
+
+    <strong
+    data-en="Refrigerant Leak"
+    data-ms="Kebocoran Refrigerant">
+    Refrigerant Leak
+    </strong>
+
+    <small
+    data-en="A/C refrigerant may be leaking."
+    data-ms="Refrigerant A/C mungkin mengalami kebocoran.">
+    A/C refrigerant may be leaking.
+    </small>
+</div>
+
+
+<div class="problem">
+    <span class="problem-icon">⚙️</span>
+
+    <strong
+    data-en="Compressor"
+    data-ms="Kompresor">
+    Compressor
+    </strong>
+
+    <small
+    data-en="Possible compressor-related A/C problem."
+    data-ms="Kemungkinan masalah A/C berkaitan kompresor.">
+    Possible compressor-related A/C problem.
+    </small>
+</div>
+
+
+<div class="problem">
+    <span class="problem-icon">🔊</span>
+
+    <strong
+    data-en="Unusual Noise"
+    data-ms="Bunyi Pelik">
+    Unusual Noise
+    </strong>
+
+    <small
+    data-en="Unexpected sound from the A/C system."
+    data-ms="Bunyi luar biasa daripada sistem A/C.">
+    Unexpected sound from the A/C system.
+    </small>
+</div>
+
+
+<div class="problem">
+    <span class="problem-icon">👃</span>
+
+    <strong
+    data-en="Unusual Smell"
+    data-ms="Bau Pelik">
+    Unusual Smell
+    </strong>
+
+    <small
+    data-en="Unpleasant smell when using the A/C."
+    data-ms="Bau tidak menyenangkan apabila menggunakan A/C.">
+    Unpleasant smell when using the A/C.
+    </small>
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY
+========================================================= -->
+
+<section class="why">
+
+<div class="why-header reveal">
+
+    <div
+    class="section-tag"
+    data-en="WHY KLANG MEWAH"
+    data-ms="KENAPA KLANG MEWAH">
+    WHY KLANG MEWAH
+    </div>
+
+    <h2
+    class="section-title"
+    data-en="Focused On One Thing — Vehicle A/C."
+    data-ms="Fokus Pada Satu Perkara — A/C Kenderaan.">
+    Focused On One Thing — Vehicle A/C.
+    </h2>
+
+</div>
+
+
+<div class="why-grid">
+
+
+<div class="why-card reveal">
+    <div class="why-number">01</div>
+
+    <h3 data-en="A/C Focused" data-ms="Fokus A/C">
+    A/C Focused
+    </h3>
+
+    <p
+    data-en="Our services are focused specifically on vehicle air-conditioning systems."
+    data-ms="Perkhidmatan kami memberi tumpuan khusus kepada sistem penghawa dingin kenderaan.">
+    Our services are focused specifically on vehicle air-conditioning systems.
+    </p>
+</div>
+
+
+<div class="why-card reveal">
+    <div class="why-number">02</div>
+
+    <h3
+    data-en="Complete A/C Care"
+    data-ms="Penjagaan A/C Lengkap">
+    Complete A/C Care
+    </h3>
+
+    <p
+    data-en="Inspection, servicing, diagnosis, repair and A/C component replacement."
+    data-ms="Pemeriksaan, servis, diagnosis, pembaikan dan penggantian komponen A/C.">
+    Inspection, servicing, diagnosis, repair and A/C component replacement.
+    </p>
+</div>
+
+
+<div class="why-card reveal">
+    <div class="why-number">03</div>
+
+    <h3
+    data-en="Many Vehicle Makes"
+    data-ms="Pelbagai Jenama">
+    Many Vehicle Makes
+    </h3>
+
+    <p
+    data-en="Vehicle air-conditioning services for many different vehicle brands."
+    data-ms="Perkhidmatan penghawa dingin untuk pelbagai jenama kenderaan.">
+    Vehicle air-conditioning services for many different vehicle brands.
+    </p>
+</div>
+
+
+<div class="why-card reveal">
+    <div class="why-number">04</div>
+
+    <h3
+    data-en="Based In Klang"
+    data-ms="Di Klang">
+    Based In Klang
+    </h3>
+
+    <p
+    data-en="Visit our workshop in Taman Sri Rantau, Klang, Selangor."
+    data-ms="Kunjungi bengkel kami di Taman Sri Rantau, Klang, Selangor.">
+    Visit our workshop in Taman Sri Rantau, Klang, Selangor.
+    </p>
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact" id="contact">
+
+<div class="contact-grid">
+
+
+<div class="contact-left reveal">
+
+    <div
+    class="section-tag"
+    data-en="VISIT OUR WORKSHOP"
+    data-ms="KUNJUNGI BENGKEL KAMI">
+    VISIT OUR WORKSHOP
+    </div>
+
+
+    <h2
+    class="section-title"
+    data-en="Let's Get Your A/C Cold Again."
+    data-ms="Biar A/C Anda Sejuk Semula.">
+    Let's Get Your A/C Cold Again.
+    </h2>
+
+
+    <p
+    data-en="Contact Klang Mewah or visit our workshop in Klang for vehicle air-conditioning inspection, servicing and repair."
+    data-ms="Hubungi Klang Mewah atau kunjungi bengkel kami di Klang untuk pemeriksaan, servis dan pembaikan penghawa dingin kenderaan.">
+
+    Contact Klang Mewah or visit our workshop in Klang
+    for vehicle air-conditioning inspection, servicing and repair.
+
+    </p>
+
+
+    <a href="tel:0332915643" class="big-phone">
+    03-3291 5643
+    </a>
+
+
+    <div class="contact-buttons">
+
+        <a
+        href="tel:0332915643"
+        class="btn btn-yellow"
+        data-en="☎ CALL WORKSHOP"
+        data-ms="☎ HUBUNGI BENGKEL">
+        ☎ CALL WORKSHOP
+        </a>
+
+
+        <a
+        href="https://www.google.com/maps/search/?api=1&query=No+8+Jalan+1+Jalan+Telok+Kapas+Taman+Sri+Rantau+42100+Klang+Selangor"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-glass">
+        📍 GOOGLE MAPS
+        </a>
+
+    </div>
+
+</div>
+
+
+
+<div class="visit-panel reveal">
+
+<div class="visit-section">
+
+    <span
+    class="visit-label"
+    data-en="ADDRESS"
+    data-ms="ALAMAT">
+    ADDRESS
+    </span>
+
+    <p>
+    <strong>Klang Mewah Sdn Bhd</strong>
+    <br><br>
+
+    No. 8, Jalan 1,<br>
+    Jalan Telok Kapas,<br>
+    Taman Sri Rantau,<br>
+    42100 Klang,<br>
+    Selangor.
+    </p>
+
+</div>
+
+
+<div class="visit-section">
+
+    <span
+    class="visit-label"
+    data-en="OPERATING HOURS"
+    data-ms="WAKTU OPERASI">
+    OPERATING HOURS
+    </span>
+
+
+    <div class="hours">
+
+        <div class="hour">
+            <span data-en="Monday" data-ms="Isnin">Monday</span>
+            <span data-en="8:30 AM – 7:00 PM" data-ms="8:30 PG – 7:00 PTG">
+            8:30 AM – 7:00 PM
+            </span>
+        </div>
+
+        <div class="hour">
+            <span data-en="Tuesday" data-ms="Selasa">Tuesday</span>
+            <span data-en="8:30 AM – 7:00 PM" data-ms="8:30 PG – 7:00 PTG">
+            8:30 AM – 7:00 PM
+            </span>
+        </div>
+
+        <div class="hour">
+            <span data-en="Wednesday" data-ms="Rabu">Wednesday</span>
+            <span data-en="8:30 AM – 7:00 PM" data-ms="8:30 PG – 7:00 PTG">
+            8:30 AM – 7:00 PM
+            </span>
+        </div>
+
+        <div class="hour">
+            <span data-en="Thursday" data-ms="Khamis">Thursday</span>
+            <span data-en="8:30 AM – 7:00 PM" data-ms="8:30 PG – 7:00 PTG">
+            8:30 AM – 7:00 PM
+            </span>
+        </div>
+
+        <div class="hour">
+            <span data-en="Friday" data-ms="Jumaat">Friday</span>
+            <span data-en="8:30 AM – 7:00 PM" data-ms="8:30 PG – 7:00 PTG">
+            8:30 AM – 7:00 PM
+            </span>
+        </div>
+
+        <div class="hour">
+            <span data-en="Saturday" data-ms="Sabtu">Saturday</span>
+            <span data-en="8:30 AM – 7:00 PM" data-ms="8:30 PG – 7:00 PTG">
+            8:30 AM – 7:00 PM
+            </span>
+        </div>
+
+        <div class="hour closed">
+            <span data-en="Sunday" data-ms="Ahad">Sunday</span>
+            <span data-en="CLOSED" data-ms="TUTUP">CLOSED</span>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FINAL CTA
+========================================================= -->
+
+<section class="final-cta">
+
+<h2
+data-en="Cool Air. Comfortable Drive."
+data-ms="Udara Sejuk. Pemanduan Selesa.">
+Cool Air. Comfortable Drive.
+</h2>
+
+<p
+data-en="Vehicle air-conditioning inspection, servicing and repair in Klang."
+data-ms="Pemeriksaan, servis dan pembaikan penghawa dingin kenderaan di Klang.">
+Vehicle air-conditioning inspection, servicing and repair in Klang.
+</p>
+
+<a
+href="tel:0332915643"
+class="btn btn-yellow"
+data-en="☎ CALL 03-3291 5643"
+data-ms="☎ HUBUNGI 03-3291 5643">
+☎ CALL 03-3291 5643
+</a>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<strong>KLANG MEWAH SDN BHD</strong>
+
+<br>
+
+<span
+data-en="Vehicle Air-Conditioning Specialist"
+data-ms="Pakar Penghawa Dingin Kenderaan">
+Vehicle Air-Conditioning Specialist
+</span>
+
+<br>
+
+Klang, Selangor
+
+<br><br>
+
+© <span id="year"></span> Klang Mewah Sdn Bhd.
+
+<span
+data-en="All Rights Reserved."
+data-ms="Hak Cipta Terpelihara.">
+All Rights Reserved.
+</span>
+
+</footer>
+
+
+
+<!-- =========================================================
+     MOBILE ACTION BAR
+========================================================= -->
+
+<div class="mobile-bar">
+
+<a
+href="tel:0332915643"
+class="mobile-call"
+data-en="☎ CALL"
+data-ms="☎ HUBUNGI">
+☎ CALL
+</a>
+
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=No+8+Jalan+1+Jalan+Telok+Kapas+Taman+Sri+Rantau+42100+Klang+Selangor"
+target="_blank"
+rel="noopener noreferrer"
+class="mobile-map"
+data-en="📍 DIRECTIONS"
+data-ms="📍 ARAH">
+📍 DIRECTIONS
+</a>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* YEAR */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+
+
+/* NAVBAR */
+
+const navbar =
+document.getElementById("navbar");
+
+function updateNavbar(){
+
+    if(window.scrollY > 30){
+        navbar.classList.add("scrolled");
+    }
+
+    else{
+        navbar.classList.remove("scrolled");
+    }
+
+}
+
+window.addEventListener("scroll",updateNavbar);
+
+updateNavbar();
+
+
+
+/* =========================================================
+   LANGUAGE
+========================================================= */
+
+function changeLanguage(language){
+
+    const items =
+    document.querySelectorAll(
+        "[data-en][data-ms]"
+    );
+
+
+    items.forEach(function(item){
+
+        if(language === "ms"){
+
+            item.textContent =
+            item.getAttribute("data-ms");
+
+        }
+
+        else{
+
+            item.textContent =
+            item.getAttribute("data-en");
+
+        }
+
+    });
+
+
+    const bm =
+    document.getElementById("bmButton");
+
+    const en =
+    document.getElementById("enButton");
+
+
+    if(language === "ms"){
+
+        bm.classList.add("active");
+
+        en.classList.remove("active");
+
+        document.documentElement.lang =
+        "ms";
+
+    }
+
+    else{
+
+        en.classList.add("active");
+
+        bm.classList.remove("active");
+
+        document.documentElement.lang =
+        "en";
+
+    }
+
+
+    localStorage.setItem(
+        "klangMewahLanguage",
+        language
+    );
+
+}
+
+
+const savedLanguage =
+localStorage.getItem(
+    "klangMewahLanguage"
+);
+
+
+if(
+    savedLanguage === "ms" ||
+    savedLanguage === "en"
+){
+
+    changeLanguage(savedLanguage);
+
+}
+
+
+
+/* =========================================================
+   LOGO FALLBACK
+========================================================= */
+
+function logoError(image){
+
+    image.style.display =
+    "none";
+
+
+    const fallback =
+    image.nextElementSibling;
+
+
+    if(fallback){
+
+        fallback.style.display =
+        "flex";
+
+    }
+
+}
+
+
+
+/* =========================================================
+   REVEAL
+========================================================= */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+
+const observer =
+new IntersectionObserver(
+
+function(entries){
+
+    entries.forEach(
+    function(entry){
+
+        if(entry.isIntersecting){
+
+            entry.target
+            .classList
+            .add("visible");
+
+            observer.unobserve(
+                entry.target
+            );
+
+        }
+
+    });
+
+},
+
+{
+    threshold:.12
+}
+
+);
+
+
+revealElements.forEach(
+function(element){
+
+    observer.observe(element);
+
+});
+
+
+
+/* =========================================================
+   HERO PARALLAX
+========================================================= */
+
+const acVisual =
+document.querySelector(
+    ".ac-visual"
+);
+
+
+if(acVisual){
+
+    window.addEventListener(
+        "mousemove",
+        function(event){
+
+            if(
+                window.innerWidth < 950
+            ){
+
+                acVisual.style.transform =
+                "";
+
+                return;
+
+            }
+
+
+            const x =
+            (
+                event.clientX /
+                window.innerWidth
+                - .5
+            ) * 10;
+
+
+            const y =
+            (
+                event.clientY /
+                window.innerHeight
+                - .5
+            ) * 10;
+
+
+            acVisual.style.transform =
+            "translate(" +
+            x +
+            "px," +
+            y +
+            "px)";
+
+        }
+    );
+
+}
+
+</script>
+
+</body>
+</html>
